@@ -37,7 +37,10 @@ public class testMessagingSystem {
     @After
     public void tearDown() {
     }
-
+    
+    /**
+    * A method to test SignUp function of MessagingSystem class
+    */
     @Test
     public void testSignUp() {
     
@@ -45,6 +48,9 @@ public class testMessagingSystem {
         assertEquals("2Sara",s.signUp("Sara", "sara123"));
     }
     
+    /**
+    *A method to test SignIn functionality of MessagingSystem class
+    */
     @Test
     public void testSignIn() {
         
@@ -52,6 +58,9 @@ public class testMessagingSystem {
         
     }
     
+    /**
+    * A method to test Read mails functionality of MessagingSystem class
+    */
     @Test
     public void testReadMails() {
         assertEquals(true,s1.signIn("0Shifa","shifa123"));
@@ -59,6 +68,9 @@ public class testMessagingSystem {
         
     }
     
+    /**
+    *A method to test Write mail functionality of MessagingSystem class
+    */
     @Test
     public void testWriteMail() {
         assertEquals("0Shifa",s1.signUp("Shifa","shifa123"));
