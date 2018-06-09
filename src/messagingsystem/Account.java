@@ -4,7 +4,7 @@ import java.util.ArrayList;
 /**
  * The class maintains a simple record about a user's account information such as name, username and password
  * We have made use of array list for keeping a record of multiple number of users.
- * @author Inspi
+ * 
  */
 
 public class Account {
