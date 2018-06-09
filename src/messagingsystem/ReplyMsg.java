@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package messagingsystem;
 import java.util.Scanner;
 import static messagingsystem.SignUpSignIn.users;
@@ -14,12 +9,13 @@ import static messagingsystem.SignUpSignIn.users;
 public class ReplyMsg {
      static int accountIndex;
     
-   void displayMenu()
+   void displayMenuReply(String sender)
     {
         int choice, numberOfMessages;
         String to,message;
         Scanner s = new Scanner(System.in);
          SignUpSignIn rs = new SignUpSignIn();
+          to= sender;
          
         while(true){
             
@@ -27,13 +23,15 @@ public class ReplyMsg {
             System.out.println("1:Reply mail");
             System.out.println("2:Read/Write mails");
             System.out.println("3:Logout");
+            
+           
                           choice=s.nextInt();
                           
                          
                           switch(choice)
                           {
-                              case 1:System.out.println("TO: ");
-                                     to=s.next();
+                              case 1:System.out.println("TO: "+ sender);
+                                     //to=
                                      System.out.println("Message: ");
                                      message=s.next();
                                      numberOfMessages=this.replyMail(to,message);
@@ -48,9 +46,9 @@ public class ReplyMsg {
                           }
                         }
     }
-   
-   
-   int replyMail(String to,String message)
+     
+     
+     int replyMail(String to,String message)
     {
         int i;
         for( i=0; i<users.size(); i++)
@@ -71,4 +69,6 @@ public class ReplyMsg {
         return numberOfMessages;
     }
     
+
 }
+
