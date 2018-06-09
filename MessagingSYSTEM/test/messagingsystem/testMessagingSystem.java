@@ -16,6 +16,7 @@ import static org.junit.Assert.*;
  */
 public class testMessagingSystem {
     SignUpSignIn s,s1;
+    ReplyMsg rs;
     public testMessagingSystem() {
     }
     
@@ -31,7 +32,7 @@ public class testMessagingSystem {
     public void setUp() {
         s = new SignUpSignIn();
         s1 = new SignUpSignIn();
-        
+        rs = new ReplyMsg();
     }
         
     @After
@@ -78,6 +79,15 @@ public class testMessagingSystem {
         assertEquals(true,s1.signIn("0Shifa","shifa123"));
         assertEquals(1,s1.writeMail("1Sana","Hello"));
         
+    }
+    
+    /**
+    *A method to test Reply mail Functinality of MessagingSystem class
+    */
+    @Test
+    public void testReplyMail() {
+        assertEquals(1, rs.replyMail("1Sana", "Hii"));
+        assertEquals(1,s1.writeMail("1Sana", "Hi gm"));
     }
     
 }
