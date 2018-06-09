@@ -24,10 +24,8 @@ public class ReplyMsg {
             System.out.println("2:Read/Write mails");
             System.out.println("3:Logout");
             
-           
-                          choice=s.nextInt();
+            choice=s.nextInt();
                           
-                         
                           switch(choice)
                           {
                               case 1:System.out.println("TO: "+ sender);
