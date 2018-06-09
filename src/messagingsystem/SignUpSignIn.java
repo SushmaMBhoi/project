@@ -2,7 +2,7 @@ package messagingsystem;
 import java.util.ArrayList;
 import java.util.Scanner;
 /**
- *
+ *The class below is used to carry out signUp and signIn operations respectively.
  * @author Shifa
  */
 public class SignUpSignIn {
@@ -15,6 +15,16 @@ public class SignUpSignIn {
     ReplyMsg rp=new ReplyMsg();
     String sender;
     
+     /**
+     * The method below accepts the name and password of a user given by the user and stores them into an object 'a'
+     * of class 'Account'. Later a variable count is maintained to keep a track of number of users and hence it is 
+     * incremented, after creating a username for the user by concatenating the count with the name of user and returning th same.
+     * 
+     * 
+     * @param name
+     * @param password
+     * @return 
+     */
     String signUp(String name,String password)
     {
         Account a = new Account();
@@ -26,6 +36,15 @@ public class SignUpSignIn {
         return a.userName;
     }
     
+    
+     /**
+     * The method below allows the already existing user to login the account only after checking for the presence of user in the array list 
+     * using a temporary variable flag. Once the user is found in the array list of multiple number of users the index where he/she is found
+     * is maintained and kept in the variable arrayIndex. If flag is 1(i.e. the user is existing) a welcome message is displayed followed by the username
+     * @param userName
+     * @param password
+     * @return 
+     */
     boolean signIn(String userName,String password)
     {
         int flag=0,choice=0;
@@ -47,7 +66,10 @@ public class SignUpSignIn {
         
     }
     
-    
+    /**
+     * Once the user is evaluated to be existing into the records a menu is displayed to carry out operations of 
+     * read message, write message or logout respectively.
+     */
      void displayMenu()
     {
         int choice, numberOfMessages;
@@ -81,7 +103,10 @@ public class SignUpSignIn {
         
     }
     
-         
+      /**
+       * Method to read message.
+       * @return 
+       */    
     int readMails(){
         int choice=1;
         messages = users.get(accountIndex).messages;
@@ -111,6 +136,13 @@ public class SignUpSignIn {
         return 0;
     }
     
+    
+    /**
+     * Method to write message after reading in the receiver id and the message to be sent to the receiver.
+     * @param to
+     * @param message
+     * @return 
+     */
     int writeMail(String to,String message){
         
         int i;
