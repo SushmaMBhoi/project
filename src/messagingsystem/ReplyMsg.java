@@ -3,8 +3,10 @@ import java.util.Scanner;
 import static messagingsystem.SignUpSignIn.users;
 
 /**
- *
- * @author sushma
+ * The class below will only get executed only if the user is already existing into the records and the validationForLogin 
+ * turns out to be true. 
+ * The accountIndex is used to obtain the index where we have find the user in the array list of all the users. 
+ * The displayMenuReply method displays the menu for the user to reply to a message, read/write to a message or logout of a system. 
  */
 public class ReplyMsg {
      static int accountIndex;
@@ -46,6 +48,13 @@ public class ReplyMsg {
     }
      
      
+  /**
+  * The method below will add the message into the receiver's unread messages after comparing for the presence of the receiver into the 
+  * the arraylist records only and returns the number of messages.
+  * @param to
+  * @param message
+  * @return 
+  */ 
      int replyMail(String to,String message)
     {
         int i;
