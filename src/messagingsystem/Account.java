@@ -1,12 +1,27 @@
 package messagingsystem;
 import java.util.ArrayList;
 
+/**
+ * The class maintains a simple record about a user's account information such as name, username and password
+ * We have made use of array list for keeping a record of multiple number of users.
+ * @author Inspi
+ */
+
 public class Account {
     
     String name,userName,password;
     ArrayList<Message> messages = new ArrayList();
     
 }
+
+/**
+ * The class below is used for message: to read the message to be send and the username of the sender.
+ * Initially we have created a constructor and assigned message as 'null' and maintained a readUnreadBit and 
+ * repliedUnrepliedBit to keep a track of messages which are read, unread, replied and unreplied and initially it is 
+ * initialized as 0. 
+ * @author Inspi
+ */
+
 
 class Message
 {
