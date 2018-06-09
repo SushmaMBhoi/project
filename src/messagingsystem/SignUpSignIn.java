@@ -13,6 +13,7 @@ public class SignUpSignIn {
     ArrayList<Message> messages = new ArrayList();
     Scanner s=new Scanner(System.in);
     ReplyMsg rp=new ReplyMsg();
+    String sender;
     
     String signUp(String name,String password)
     {
@@ -103,7 +104,8 @@ public class SignUpSignIn {
             System.out.println(messages.get(choice-1).message);
             users.get(accountIndex).messages.get(choice-1).readUnreadBit=1;
             
-            rp.displayMenu();  
+            sender = messages.get(choice-1).sender;
+            rp.displayMenuReply(sender);  
             return messages.size();
         }
         return 0;
