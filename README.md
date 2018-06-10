@@ -27,3 +27,10 @@ The functionality upon selectIng the above options is self explanatory.
 
 Future scope of the project:
     This version of application can handle only the messages with single string without spaces,In future we may upgrade the software       to handle strings containing the Whitespaces.
+
+
+Submitted By,
+
+1. Shifa Sanadi - 2GI15CS146
+2. Snehila Tiwari - 2GI15CS157
+3. Sushma Bhoi - 2GI15CS167
