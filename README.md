@@ -1,4 +1,4 @@
-#Messaging System
+MESSAGING SYSTEM
 
 This application has the following features.
 1)Create an account(SignUp)
