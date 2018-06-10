@@ -21,9 +21,9 @@ public class SignUpSignIn {
      * incremented, after creating a username for the user by concatenating the count with the name of user and returning th same.
      * 
      * 
-     * @param name
-     * @param password
-     * @return 
+     * @param name  Name of account holder 
+     * @param password  Password for an account to be created
+     * @return User name for newly created account
      */
     String signUp(String name,String password)
     {
@@ -41,9 +41,9 @@ public class SignUpSignIn {
      * The method below allows the already existing user to login the account only after checking for the presence of user in the array list 
      * using a temporary variable flag. Once the user is found in the array list of multiple number of users the index where he/she is found
      * is maintained and kept in the variable arrayIndex. If flag is 1(i.e. the user is existing) a welcome message is displayed followed by the username
-     * @param userName
-     * @param password
-     * @return 
+     * @param userName User name of an account
+     * @param password  Password of an account
+     * @return True if account is valid,false otherwise
      */
     boolean signIn(String userName,String password)
     {
@@ -105,7 +105,7 @@ public class SignUpSignIn {
     
       /**
        * Method to read message.
-       * @return 
+       * @return Number of mails in inbox
        */    
     int readMails(){
         int choice=1;
@@ -139,9 +139,9 @@ public class SignUpSignIn {
     
     /**
      * Method to write message after reading in the receiver id and the message to be sent to the receiver.
-     * @param to
-     * @param message
-     * @return 
+     * @param to  Receiver of the mail
+     * @param message  Message to be sent
+     * @return Number of mails in the receiver's inbox
      */
     int writeMail(String to,String message){
         
