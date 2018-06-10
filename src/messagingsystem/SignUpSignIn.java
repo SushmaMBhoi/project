@@ -10,6 +10,7 @@ public class SignUpSignIn {
     static ArrayList<Account> users = new ArrayList();
     static long count=0;
     static int accountIndex;
+    int afterReply=0;
     ArrayList<Message> messages = new ArrayList();
     Scanner s=new Scanner(System.in);
     ReplyMsg rp=new ReplyMsg();
@@ -76,6 +77,12 @@ public class SignUpSignIn {
         String to,message;
         while(true){
             
+             if(afterReply==1)
+            {   
+                afterReply=0;
+                return;
+            }
+
             System.out.println("Enter your choice\n");
             System.out.println("1:Read mails");
             System.out.println("2:Write mails");
@@ -131,6 +138,7 @@ public class SignUpSignIn {
             
             sender = messages.get(choice-1).sender;
             rp.displayMenuReply(sender);  
+            afterReply=1;
             return messages.size();
         }
         return 0;
