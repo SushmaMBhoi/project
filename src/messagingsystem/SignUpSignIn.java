@@ -14,7 +14,7 @@ public class SignUpSignIn {
     ArrayList<Message> messages = new ArrayList();
     Scanner s=new Scanner(System.in);
     ReplyMsg rp=new ReplyMsg();
-    String sender;
+    String receiver, sender;
     
      /**
      * The method below accepts the name and password of a user given by the user and stores them into an object 'a'
@@ -60,6 +60,7 @@ public class SignUpSignIn {
         if(flag==1){                                                      //Valid account
             System.out.println("Welcome\t" + users.get(accountIndex).name);
             //op.displayMenu(users, accountIndex);
+            
             return true;
         }
         else
@@ -117,6 +118,9 @@ public class SignUpSignIn {
     int readMails(){
         int choice=1;
         messages = users.get(accountIndex).messages;
+        sender = users.get(accountIndex).userName;
+        //System.out.println("This account is : " +sender);
+        
         if(messages.size()==0)
             System.out.println("No mails to read\n");
         else
@@ -136,8 +140,8 @@ public class SignUpSignIn {
             System.out.println(messages.get(choice-1).message);
             users.get(accountIndex).messages.get(choice-1).readUnreadBit=1;
             
-            sender = messages.get(choice-1).sender;
-            rp.displayMenuReply(sender);  
+            receiver = messages.get(choice-1).sender;
+            rp.displayMenuReply(receiver, sender);  
             afterReply=1;
             return messages.size();
         }
