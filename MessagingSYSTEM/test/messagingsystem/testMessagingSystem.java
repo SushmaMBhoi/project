@@ -86,7 +86,7 @@ public class testMessagingSystem {
     */
     @Test
     public void testReplyMail() {
-        assertEquals(2, rs.replyMail("1Sana", "Hii"));
+       assertEquals(2, rs.replyMail("1Sana", "Hii","0Sushma"));
         //assertEquals(3,s1.writeMail("1Sana", "Hi gm"));
     }
     
