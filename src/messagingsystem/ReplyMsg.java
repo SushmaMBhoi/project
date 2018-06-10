@@ -42,7 +42,7 @@ public class ReplyMsg {
                                      break;
                                      
                               case 2:rs.displayMenu();
-                                     break;
+                                     return;
                                      
                               case 3:return;
                                                                           
