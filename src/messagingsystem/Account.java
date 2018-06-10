@@ -25,7 +25,7 @@ public class Account {
 
 class Message
 {
-    String message,sender;
+    String message,sender,receiver;
     int readUnreadBit, repliedUnrepliedBit;
     
     Message(){
