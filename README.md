@@ -2,9 +2,8 @@ MESSAGING SYSTEM
 
 This application has the following features.
 
-1)Create an account(SignUp)
-
-2)SignIn
+    1)Create an account(SignUp)
+    2)SignIn
 
     i)Read Mail->[Reply]    
     ii)Write Mail
