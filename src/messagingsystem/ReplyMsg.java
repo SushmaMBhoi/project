@@ -51,8 +51,8 @@ public class ReplyMsg {
   /**
   * The method below will add the message into the receiver's unread messages after comparing for the presence of the receiver into the 
   * the arraylist records only and returns the number of messages.
-  * @param to
-  * @param message
+  * @param to Reciever user name
+  * @param message Message to be sent
   * @return 
   */ 
      int replyMail(String to,String message)
