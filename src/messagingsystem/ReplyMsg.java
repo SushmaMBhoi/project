@@ -11,6 +11,10 @@ import static messagingsystem.SignUpSignIn.users;
 public class ReplyMsg {
      static int accountIndex;
     
+     /**
+     *@param Reciever
+     */
+     
    void displayMenuReply(String sender)
     {
         int choice, numberOfMessages;
@@ -53,7 +57,7 @@ public class ReplyMsg {
   * the arraylist records only and returns the number of messages.
   * @param to Reciever user name
   * @param message Message to be sent
-  * @return 
+  * @return Number of mails in reciever's inbox
   */ 
      int replyMail(String to,String message)
     {
