@@ -4,10 +4,9 @@ This application has the following features.
 
     1)Create an account(SignUp)
     2)SignIn
-
-    i)Read Mail->[Reply]    
-    ii)Write Mail
-    iii)LogOut
+        i)Read Mail->[Reply]    
+        ii)Write Mail
+        iii)LogOut
     
 Base file is MessagingSystem.java.
 
