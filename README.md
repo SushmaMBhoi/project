@@ -25,4 +25,4 @@ Once accounts are created we login by selecting SignIn option.Application will d
     2)Write mail
     3)Logout
 
-The functionality upon selectng the above options is self explainatory.
+The functionality upon selectIng the above options is self explanatory.
