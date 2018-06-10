@@ -12,17 +12,18 @@ public class ReplyMsg {
      static int accountIndex;
     
      /**
-     *@param Reciever
+     *@param receiver Reciever of mail
+     *@param sender Sender of mail
      */
      
-   void displayMenuReply(String sender)
+   void displayMenuReply(String receiver, String sender)
     {
         int choice, numberOfMessages;
         String to,message;
         Scanner s = new Scanner(System.in);
-         SignUpSignIn rs = new SignUpSignIn();
-          to= sender;
-         
+        SignUpSignIn rs = new SignUpSignIn();
+        to= receiver;
+           
         while(true){
             
             System.out.println("Enter your choice\n");
@@ -34,11 +35,11 @@ public class ReplyMsg {
                           
                           switch(choice)
                           {
-                              case 1:System.out.println("TO: "+ sender);
+                              case 1:System.out.println("TO: "+ receiver);
                                      //to=
                                      System.out.println("Message: ");
                                      message=s.next();
-                                     numberOfMessages=this.replyMail(to,message);
+                                     numberOfMessages=this.replyMail(to,message,sender);
                                      break;
                                      
                               case 2:rs.displayMenu();
@@ -55,11 +56,11 @@ public class ReplyMsg {
   /**
   * The method below will add the message into the receiver's unread messages after comparing for the presence of the receiver into the 
   * the arraylist records only and returns the number of messages.
-  * @param to Reciever user name
+  * @param to Receiver user name
   * @param message Message to be sent
-  * @return Number of mails in reciever's inbox
+  * @return Number of mails in receiver's inbox
   */ 
-     int replyMail(String to,String message)
+     int replyMail(String to, String message, String sender)
     {
         int i;
         for( i=0; i<users.size(); i++)
@@ -68,7 +69,9 @@ public class ReplyMsg {
             {
                 Message m=new Message();
                 m.message=message;
-                m.sender=users.get(accountIndex).userName;
+                m.sender=sender;
+                //System.out.println(m.message);
+                //System.out.println(m.sender);
                 
                 users.get(i).messages.add(m);
                 System.out.println("Message sent!\n");
@@ -78,8 +81,6 @@ public class ReplyMsg {
         int numberOfMessages=users.get(i).messages.size();
  
         return numberOfMessages;
-    }
-    
-
+    }    
 }
 
